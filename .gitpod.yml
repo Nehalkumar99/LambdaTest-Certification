@@ -1,0 +1,7 @@
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - init: mvn install # runs during prebuild
+    command: echo 'Please check your test on https://automation.lambdatest.com/'

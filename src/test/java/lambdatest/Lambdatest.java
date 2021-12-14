@@ -1,6 +1,5 @@
 package lambdatest; //<your package name>
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -12,8 +11,6 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import javax.imageio.ImageIO;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -107,7 +104,7 @@ public class Lambdatest {
          WebElement sliderPosition = driver.findElement(By.xpath("//div[@style='position: absolute; left: 540px; margin-top: 5px; background-color: rgb(204, 204, 204);']"));
          driver.findElement(By.xpath("//input[@id='tried-ecom']")).click();
          new Actions(driver).moveToElement(slider).dragAndDrop(slider, sliderPosition).build().perform();
-    	driver.findElement(By.id("comments")).sendKeys("Fwwdback");
+    	driver.findElement(By.id("comments")).sendKeys("The Products are very nice to buy online");
     	((JavascriptExecutor) driver).executeScript("window.open()");
     	ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
     	driver.switchTo().window(tabs.get(1));
@@ -137,9 +134,7 @@ public class Lambdatest {
 			os.close();
 
         driver.switchTo().window(tabs.get(0));
-        WebElement uploadElement = driver.findElement(By.xpath("//input[@id='file']"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('style')",
-				uploadElement);
+
 		try {
         driver.findElement(By.id("file")).sendKeys(absolute);
         driver.switchTo().alert().accept();
@@ -159,3 +154,15 @@ public class Lambdatest {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
