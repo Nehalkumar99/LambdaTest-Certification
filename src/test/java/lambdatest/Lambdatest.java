@@ -33,7 +33,7 @@ public void run() {
     capsHashtable.put("version", "92.0");
     capsHashtable.put("platform", "Windows 10");
     capsHashtable.put("resolution", "1024x768");
-    capsHashtable.put("build", "Checking-lambdatest-build-1");
+    capsHashtable.put("build", "Certification-build");
     capsHashtable.put("name", "Test 1");
     Lambdatest r1 = new Lambdatest();
     r1.executeTest(capsHashtable);
@@ -47,7 +47,7 @@ class TestClass2 implements Runnable {
       capsHashtable.put("version", "96.0");
       capsHashtable.put("platform", "Windows 8.1");
       capsHashtable.put("resolution", "1024x768");
-      capsHashtable.put("build", "Checking-lambdatest-build-1");
+      capsHashtable.put("build", "Certification-build");
       capsHashtable.put("name", "Test 2");
       Lambdatest r2 = new Lambdatest();
       r2.executeTest(capsHashtable);
